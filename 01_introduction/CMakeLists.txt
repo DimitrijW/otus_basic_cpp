@@ -1,9 +1,14 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
 
-project(hello CXX)
+project(01.hello_world)
 
-add_executable(hello 
-    main.cpp    
+add_executable(hello_world 
+    hello_world.cpp
+    example.cpp
+    example.h
 )
 
-target_compile_features(hello PUBLIC cxx_std_17)
+set_target_properties(hello_world PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
